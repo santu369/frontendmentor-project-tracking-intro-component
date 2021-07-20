@@ -1,11 +1,18 @@
 import "./App.scss";
+import Content from "./components/Content/Content";
+import Header from "./components/Header/Header";
+import Illustration from "./components/Illustration/Illustration";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>This is react app with sass</h1>
-      </header>
+    <div className="container-fluid">
+      <Header />
+      {/* <section className="section">
+        <Content />
+        <Illustration />
+      </section>
+      <Footer /> */}
     </div>
   );
 }

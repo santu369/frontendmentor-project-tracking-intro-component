@@ -1,0 +1,56 @@
+@use "../common" as *;
+
+.header {
+  &__logo,
+  &__menu-icon {
+    width: 1.5rem;
+  }
+  &__nav {
+    display: none;
+  }
+  &__menu {
+    border: none;
+    background: none;
+    padding: 0;
+  }
+  &__nav-list {
+    width: 80vw;
+    box-shadow: 0 0.35rem 1rem 0 $neu-gray-blue;
+    border-radius: 0.35rem;
+  }
+  &__nav-item {
+    margin: 1rem;
+    display: block;
+    &--highlight {
+      position: relative;
+      margin-top: 2rem;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -1rem;
+        width: 100%;
+        height: 1px;
+        background-color: $neu-gray-blue;
+      }
+    }
+  }
+  &__nav-link {
+    padding: 0.5em 1em;
+    font-weight: $font-bold;
+    color: $neu-very-dark-blue;
+    &--highlight {
+      color: $neu-gray-blue;
+    }
+  }
+  &__nav--open {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    padding: 0.5rem;
+    justify-content: center;
+    background: $white;
+  }
+}

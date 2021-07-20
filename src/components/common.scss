@@ -1,0 +1,46 @@
+/* colors */
+$prim-red: hsl(0, 100%, 68%);
+$neu-very-dark-blue: hsl(230, 29%, 20%);
+$neu-dark-gray-blue: hsl(230, 11%, 40%);
+$neu-gray-blue: hsl(231, 7%, 65%);
+$neu-light-gray-blue: hsl(207, 33%, 95%);
+
+$white: hsl(0, 0%, 100%);
+
+/* fonts */
+$font-barlow-condensed: "Barlow Condensed", sans-serif;
+$font-barlow: "Barlow, sans-serif";
+
+$font-regular: 400;
+$font-bold: 700;
+
+body {
+  font-size: 18px;
+  font-family: $font-barlow-condensed;
+  font-weight: $font-regular;
+  text-align: center;
+}
+
+/* screen reader only class */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  color: white;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
