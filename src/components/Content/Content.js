@@ -19,6 +19,7 @@ const Content = () => {
           Project planning and time tracking for agile teams
         </p>
         <p className="section__cta-container">
+          {/* eslint-disable-next-line */}
           <a href="#" className="section__cta">
             schedule a demo
           </a>
