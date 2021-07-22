@@ -1,0 +1,28 @@
+/* colors */
+$prim-red: hsl(0, 100%, 68%);
+$neu-very-dark-blue: hsl(230, 29%, 20%);
+$neu-dark-gray-blue: hsl(230, 11%, 40%);
+$neu-gray-blue: hsl(231, 7%, 65%);
+$neu-light-gray-blue: hsl(207, 33%, 95%);
+
+$white: hsl(0, 0%, 100%);
+
+/* fonts */
+$font-barlow-condensed: "Barlow Condensed", sans-serif;
+$font-barlow: "Barlow", sans-serif;
+
+$font-regular: 400;
+$font-bold: 700;
+
+a:hover,
+a:focus-visible,
+button:hover,
+button:focus-visible {
+  outline: $neu-very-dark-blue dotted 0.25rem;
+  outline-offset: 0.25rem;
+}
+
+a:active {
+  transition: all 100ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(0.9);
+}

@@ -1,0 +1,137 @@
+@use "../../common.scss" as *;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+.section {
+  order: 2;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  text-align: left;
+  font-family: $font-barlow-condensed;
+  font-weight: $font-bold;
+  &__main-heading {
+    &--pill {
+      letter-spacing: 1px;
+      margin-right: 1rem;
+      font-size: 0.85rem;
+      background-color: $neu-very-dark-blue;
+      color: $white;
+    }
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.3rem;
+    color: $neu-gray-blue;
+  }
+  &__sub-heading {
+    margin-top: 0.5em;
+    text-transform: uppercase;
+    font-weight: $font-bold;
+    font-size: 2.25rem;
+    line-height: 1;
+    color: $neu-very-dark-blue;
+  }
+  &__lead {
+    margin-top: 1em;
+    color: $neu-dark-gray-blue;
+    padding-right: 3em;
+    font-size: 0.9rem;
+    font-family: $font-barlow;
+    line-height: 1.25;
+  }
+  &__cta-container {
+    margin-top: 2em;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: $neu-gray-blue;
+    font-weight: $font-regular;
+  }
+  &__cta {
+    display: inline-block;
+    background: $prim-red;
+    font-weight: $font-bold;
+    color: $white;
+    padding: 0.75em 1.25em;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-radius: 0.35em;
+    margin-right: 1.25em;
+    &:hover,
+    &:focus-visible {
+      color: $white;
+      opacity: 0.75;
+    }
+  }
+}
+
+.illustration {
+  order: 1;
+  height: 45vh;
+  margin-bottom: 1em;
+  overflow: hidden;
+  &__img {
+    height: 36vh;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .main {
+    flex-direction: row;
+    margin-top: 2em;
+  }
+  .section {
+    padding-top: 3em;
+    order: 1;
+    width: 50%;
+    &__main-heading {
+      font-size: 1rem;
+    }
+    &__sub-heading {
+      font-size: 3rem;
+      padding-right: 2.5em;
+    }
+    &__lead {
+      font-size: 1rem;
+      padding-right: 12.5em;
+      line-height: 1.5;
+    }
+  }
+  .illustration {
+    padding-top: 2.5em;
+    order: 2;
+    height: 25rem;
+    width: 50%;
+    overflow: visible;
+    &__img {
+      height: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .section {
+    margin-top: 2.5em;
+    &__sub-heading {
+      font-size: 3.5rem;
+      padding-right: 0;
+    }
+    &__lead {
+      padding-right: 16em;
+      margin-top: 2em;
+    }
+    &__cta-container {
+      margin-top: 4em;
+    }
+    &__cta {
+      padding: 0.75em 2em;
+    }
+  }
+  .illustration {
+    height: 125%;
+  }
+}

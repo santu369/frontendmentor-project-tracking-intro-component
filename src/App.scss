@@ -1,0 +1,74 @@
+@use "../src/common.scss" as *;
+
+body {
+  font-size: 18px;
+  font-family: $font-barlow;
+  font-weight: $font-regular;
+  text-align: center;
+  min-width: 18.75rem;
+  position: relative;
+  &:after {
+    background: $neu-light-gray-blue;
+    content: "";
+    position: absolute;
+    width: 50vw;
+    height: 60vh;
+    right: 0;
+    top: 0;
+    z-index: -10;
+    border-bottom-left-radius: 5rem;
+  }
+}
+
+/* screen reader only class */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  color: white;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+.app {
+  &__container {
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .root {
+    &__container {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+  }
+  .app {
+    &__container {
+      width: 60rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .app {
+    &__container {
+      width: 70rem;
+    }
+  }
+}

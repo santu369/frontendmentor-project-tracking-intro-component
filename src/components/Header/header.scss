@@ -1,12 +1,23 @@
-@use "../common" as *;
+@use "../../common.scss" as *;
 
 .header {
+  font-family: $font-barlow-condensed;
+  font-weight: $font-bold;
   &__logo,
   &__menu-icon {
     width: 1.5rem;
   }
   &__nav {
-    display: none;
+    position: absolute;
+    top: -30rem;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: top 300ms ease-in-out;
+    width: 100%;
+    margin-top: 1.5rem;
+    visibility: hidden;
   }
   &__menu {
     border: none;
@@ -17,6 +28,7 @@
     width: 80vw;
     box-shadow: 0 0.35rem 1rem 0 $neu-gray-blue;
     border-radius: 0.35rem;
+    background: $white;
   }
   &__nav-item {
     margin: 1rem;
@@ -39,18 +51,70 @@
     padding: 0.5em 1em;
     font-weight: $font-bold;
     color: $neu-very-dark-blue;
+    letter-spacing: 1px;
+    display: inline-block;
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+      color: $neu-very-dark-blue;
+      outline: $neu-very-dark-blue dotted 0.25rem;
+      outline-offset: 0.15rem;
+    }
+    &:active {
+      transition: all 100ms cubic-bezier(0.4, 0, 0.2, 1);
+      transform: scale(0.9);
+    }
     &--highlight {
       color: $neu-gray-blue;
+      &:hover {
+        color: $neu-gray-blue;
+      }
+      &:focus-visible {
+        outline: $neu-very-dark-blue dotted 0.25rem;
+        outline-offset: 0.15rem;
+      }
     }
   }
   &__nav--open {
-    display: flex;
-    align-items: center;
-    position: absolute;
     top: 5rem;
-    left: 0;
-    padding: 0.5rem;
-    justify-content: center;
-    background: $white;
+    visibility: visible;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .header {
+    &__logo {
+      width: 2rem;
+    }
+    &__menu {
+      display: none;
+    }
+    &__nav {
+      position: relative;
+      top: 0;
+      justify-content: flex-end;
+      margin-top: 0;
+      visibility: visible;
+    }
+    &__nav-list {
+      background: none;
+      box-shadow: none;
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 0;
+    }
+    &__nav-item {
+      margin: 0;
+      &--highlight {
+        margin-left: 4rem;
+        &:before {
+          width: 0.3rem;
+          height: 0.3rem;
+          border-radius: 50%;
+          top: 35%;
+          left: -2rem;
+        }
+      }
+    }
   }
 }
