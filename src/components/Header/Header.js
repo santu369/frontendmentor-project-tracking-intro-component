@@ -6,9 +6,6 @@ import closeIcon from "../../images/icon-close.svg";
 
 const Header = () => {
   const [menuState, setMenuState] = useState(false);
-  const toggleMobileNav = () => {
-    setMenuState(!menuState);
-  };
   return (
     <header className="header w-100 p-4 d-flex align-items-center justify-content-between">
       <a href="#" className="header__branding" target="_self">
