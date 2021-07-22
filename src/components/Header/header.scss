@@ -3,6 +3,8 @@
 .header {
   font-family: $font-barlow-condensed;
   font-weight: $font-bold;
+  position: relative;
+  top: 2rem;
   &__logo,
   &__menu-icon {
     width: 1.5rem;
