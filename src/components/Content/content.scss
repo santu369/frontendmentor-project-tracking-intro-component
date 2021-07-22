@@ -70,11 +70,11 @@
 
 .illustration {
   order: 1;
-  height: 45vh;
+  height: 20rem;
   margin-bottom: 1em;
   overflow: hidden;
   &__img {
-    height: 36vh;
+    height: 75%;
     object-fit: cover;
   }
 }
