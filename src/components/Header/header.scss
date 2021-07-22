@@ -4,12 +4,11 @@
   font-family: $font-barlow-condensed;
   font-weight: $font-bold;
   position: relative;
-  top: 2rem;
   &__logo,
   &__menu-icon {
     width: 1.5rem;
   }
-  &__nav {
+  &__popup {
     position: absolute;
     left: 0;
     display: flex;
@@ -75,10 +74,10 @@
       }
     }
   }
-  &__nav--open {
+  &__popup--open {
     animation: nav-visible 300ms ease-in-out forwards;
   }
-  &__nav--close {
+  &__popup--close {
     animation: nav-hidden 300ms ease-in-out;
   }
 }
@@ -122,13 +121,14 @@
 
 @media only screen and (min-width: 48rem) {
   .header {
+    top: 1.5rem;
     &__logo {
       width: 2rem;
     }
     &__menu {
       display: none;
     }
-    &__nav {
+    &__popup {
       position: relative;
       top: 0;
       justify-content: flex-end;
@@ -156,11 +156,17 @@
         }
       }
     }
-    &__nav--open {
+    &__popup--open {
       animation: none;
     }
-    &__nav--close {
+    &__popup--close {
       animation: none;
     }
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .header {
+    top: 2rem;
   }
 }

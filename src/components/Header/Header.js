@@ -4,22 +4,7 @@ import logo from "../../images/logo.svg";
 import hamburgerIcon from "../../images/icon-hamburger.svg";
 import closeIcon from "../../images/icon-close.svg";
 
-const Header = () => {
-  const [menuState, setMenuState] = useState(false);
-  const [menuToggled, setMenuToggled] = useState(false);
-
-  const toggleNav = () => {
-    console.log(menuState, menuToggled);
-    if (menuState) {
-      setMenuToggled((prevValue) => !prevValue);
-    }
-    setMenuState((prevValue) => !prevValue);
-    if (!menuState && menuToggled) {
-      setMenuToggled((prevValue) => !prevValue);
-    }
-    console.log(menuState, menuToggled);
-  };
-
+const Header = ({ menuState, menuToggled, toggleNav }) => {
   return (
     <header className="header w-100 p-4 d-flex align-items-center justify-content-between">
       {/* eslint-disable-next-line */}
@@ -35,10 +20,9 @@ const Header = () => {
         />
       </button>
       <nav
-        className={`header__nav ${menuState ? "header__nav--open" : ""} ${
-          !menuState && menuToggled ? "header__nav--close" : ""
+        className={`header__popup ${menuState ? "header__popup--open" : ""} ${
+          !menuState && menuToggled ? "header__popup--close" : ""
         }`}
-        id="nav"
       >
         <ul className="header__nav-list">
           <li className="header__nav-item">
