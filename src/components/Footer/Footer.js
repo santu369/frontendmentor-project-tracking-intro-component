@@ -10,6 +10,7 @@ const Footer = () => {
           class="footer__link"
           href="https://www.frontendmentor.io/challenges/project-tracking-intro-component-5d289097500fcb331a67d80e"
           rel="noopener noreferrer"
+          target="_blank"
         >
           Frontend Mentor
         </a>
@@ -21,6 +22,7 @@ const Footer = () => {
           class="footer__link"
           href="https://twitter.com/santu69"
           rel="noopener noreferrer"
+          target="_blank"
         >
           Shiva Santosh Jana
         </a>

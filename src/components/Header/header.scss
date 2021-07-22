@@ -82,6 +82,7 @@
 }
 
 /* no animations for users who prefer reduced animations */
+
 @keyframes nav-visible {
   0% {
     top: -30rem;
@@ -152,6 +153,12 @@
           left: -2rem;
         }
       }
+    }
+    &__nav--open {
+      animation: none;
+    }
+    &__nav--close {
+      animation: none;
     }
   }
 }

@@ -12,6 +12,7 @@
     margin-top: 1rem;
   }
   &__link {
+    display: inline-block;
     color: $neu-dark-gray-blue;
     font-weight: $font-bold;
     margin-left: 0.5em;
