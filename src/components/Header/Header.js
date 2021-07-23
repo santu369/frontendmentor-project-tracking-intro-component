@@ -12,7 +12,11 @@ const Header = ({ menuState, menuToggled, toggleNav }) => {
         <img src={logo} alt="" className="header__logo" />
         <span className="sr-only">Project Tracking Logo</span>
       </a>
-      <button onClick={toggleNav} className="header__menu">
+      <button
+        onClick={toggleNav}
+        className="header__menu"
+        aria-expanded={menuState}
+      >
         <img
           className="header__menu-icon"
           src={menuState ? closeIcon : hamburgerIcon}
