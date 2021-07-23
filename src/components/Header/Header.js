@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./header.scss";
 import logo from "../../images/logo.svg";
 import hamburgerIcon from "../../images/icon-hamburger.svg";

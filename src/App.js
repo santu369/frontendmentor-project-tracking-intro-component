@@ -21,7 +21,10 @@ function App() {
   };
 
   const checkToToggleNav = (event) => {
-    if (menuState && !event.target.classList[0].startsWith("header__nav")) {
+    if (
+      (menuState && !event.target.classList[0].startsWith("header__nav")) ||
+      (menuState && event.target.classList.contains("header__nav-link"))
+    ) {
       toggleNav(event);
     }
   };
